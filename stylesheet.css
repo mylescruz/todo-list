@@ -8,3 +8,25 @@ body {
     justify-content: center;
     margin-top: 25px;
 }
+
+.todo {
+    background-color: white;
+    border: solid rgb(0, 120, 120);
+    height: 350px;
+}
+  
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 400px;
+    background-color: rgb(0, 120, 120);
+    padding: 0px 15px;
+    color: white;
+    font-family: system-ui;
+}
+
+#new:hover {
+    color: black;
+    cursor: pointer;
+}
