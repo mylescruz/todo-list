@@ -59,6 +59,10 @@ body {
     color: white;
 }
 
+#add {
+    text-align: center;
+}
+
 .manager > button {
     height: 25px;
     width: 25px;
@@ -67,7 +71,6 @@ body {
     border-radius: 50%;
     border: 1px solid white;
     box-shadow: 0px 1px 4px var(--color-shadow);
-    text-align: center;
     -webkit-transition: border 0.2s, color 0.2s, background-color 0.2s;
     -moz-transition: border 0.2s, color 0.2s, background-color 0.2s;
     -ms-transition: border 0.2s, color 0.2s, background-color 0.2s;
@@ -107,19 +110,19 @@ body {
 
 .text {
     float: left;
-    overflow-x: scroll;
-    max-width: 85%;
     padding: 0;
     margin: 0;
+    overflow-x: scroll;
+    max-width: 75%;
 }
 
-.delete {
+.delete, .complete {
     float: right;
     appearance: none;
     border: none;
     font-size: 1.25em;
-    background-color: white;
     text-align: center;
+    background-color: white;
     -webkit-transition: transform 0.5s;
     -moz-transition: transform 0.5s;
     -o-transition: transform 0.5s;
@@ -127,11 +130,19 @@ body {
     transition: transform 0.5s;
 }
 
-.delete:hover {
+.delete:hover, .complete:hover {
     cursor: pointer;
     -webkit-transform: scale(1.25,1.25);
     -moz-transform: scale(1.25,1.25);
     -ms-transform: scale(1.25,1.25);
     -o-transform: scale(1.25,1.25);
     transform: scale(1.25,1.25);
+}
+
+.completed > p{
+    margin: 0.5em 0em 0.5em;
+    padding: 0em 0em 0.25em;
+    font-size: 1em;
+    color: gray;
+    border-bottom: 1px solid rgba(192, 190, 190, 0.68); 
 }
