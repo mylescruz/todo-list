@@ -109,26 +109,22 @@ body {
 .delete {
     float: right;
     appearance: none;
-    border-radius: 50%;
-    border: 2px solid black;
+    border: none;
     background-color: white;
     text-align: center;
-    -webkit-transition: border 0.2s, color 0.2s, background-color 0.2s;
-    -moz-transition: border 0.2s, color 0.2s, background-color 0.2s;
-    -ms-transition: border 0.2s, color 0.2s, background-color 0.2s;
-    -o-transition: border 0.2s, color 0.2s, background-color 0.2s;
-    transition: border 0.2s, color 0.2s, background-color 0.2s;
+    -webkit-transition: transform 0.5s;
+    -moz-transition: transform 0.5s;
+    -o-transition: transform 0.5s;
+    -ms-transition: transform 0.5s;
+    transition: transform 0.5s;
 }
 
 .delete:hover {
-    background-color: white;
-    border: 2px solid red;
-    color: red;
     cursor: pointer;
-    font-weight: bold;
-}
-
-.delete:active {
-    background-color: red;
-    color: white;
+    background-color: none;
+    -webkit-transform: scale(1.25,1.25);
+    -moz-transform: scale(1.25,1.25);
+    -ms-transform: scale(1.25,1.25);
+    -o-transform: scale(1.25,1.25);
+    transform: scale(1.25,1.25);
 }
