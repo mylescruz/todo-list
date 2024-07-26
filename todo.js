@@ -1,25 +1,34 @@
 // Global Variables
 let tasks = document.querySelector('.tasks');
-let taskCount = 0;
+
+// Functions creating, completing and deleting tasks
+function deleteTask() {
+    console.log("Button clicked: ", this);
+    console.log("Parent node: ", this.parentNode);
+    this.parentNode.remove();
+}
 
 // Function to create task
 function createTask() {
     let input = document.querySelector('.new-task');
         
     if (/\S/.test(input.value)) {
-        taskCount += 1;
         let newTask = document.createElement('div');
         
         newTask.textContent = input.value;
-        newTask.setAttribute('class','task');
-        newTask.setAttribute('id','task-'+taskCount);
+        newTask.classList.add('task');
+
         tasks.appendChild(newTask);
-        let checkBox = document.createElement('input');
-        checkBox.setAttribute('type','checkbox');
-        checkBox.setAttribute('class','checkbox');
-        checkBox.setAttribute('id','checkbox-'+taskCount);
-        newTask.appendChild(checkBox);
+
+        let deleteButton = document.createElement('button');
+        deleteButton.classList.add('class','delete');
+        deleteButton.innerHTML = 'D';
+        
+        newTask.appendChild(deleteButton);
+        
         input.value = "";
+
+        deleteButton.addEventListener('click', deleteTask); 
     }
 }
 
@@ -32,5 +41,5 @@ window.addEventListener('DOMContentLoaded', () => {
         if (event.code === 'Enter') {
             createTask();
         }
-    })
+    });
 });
