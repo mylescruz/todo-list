@@ -86,9 +86,15 @@ body {
     color: white;
 }
 
-#tasks {
+.tasks {
     display: flex;
     flex-direction: column;
     justify-content: start;
-    margin: 10px 5px;
+    margin: 0.5em 0.5em;
 }
+
+.task {
+    padding: 0.25em 0em;
+    border-bottom: 1px solid rgba(192, 190, 190, 0.68);
+}
+
