@@ -91,6 +91,12 @@ body {
     flex-direction: column;
     justify-content: start;
     margin: 0.5em 0.5em;
+    overflow-y: scroll;
+    max-height: 225px;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
 }
 
 .task {
