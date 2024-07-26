@@ -22,7 +22,7 @@ function createTask() {
 
         let deleteButton = document.createElement('button');
         deleteButton.classList.add('class','delete');
-        deleteButton.innerHTML = 'D';
+        deleteButton.innerHTML = '&#128465';
         
         newTask.appendChild(deleteButton);
         
