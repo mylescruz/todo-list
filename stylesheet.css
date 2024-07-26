@@ -96,5 +96,9 @@ body {
 .task {
     padding: 0.25em 0em;
     border-bottom: 1px solid rgba(192, 190, 190, 0.68);
+    float: left;
 }
 
+.check-box {
+    float: right;
+}
