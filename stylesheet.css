@@ -90,7 +90,6 @@ body {
 .tasks {
     display: flex;
     flex-direction: column;
-    justify-content: start;
     margin: 0.5em 0.5em;
     overflow-y: scroll;
     max-height: 225px;
@@ -101,15 +100,24 @@ body {
 }
 
 .task {
-    float: left;
-    padding: 0.25em 0em;
+    padding: 0;
+    margin: 0.25em 0em 0em;
     border-bottom: 1px solid rgba(192, 190, 190, 0.68);
+}
+
+.text {
+    float: left;
+    overflow-x: scroll;
+    max-width: 85%;
+    padding: 0;
+    margin: 0;
 }
 
 .delete {
     float: right;
     appearance: none;
     border: none;
+    font-size: 1.25em;
     background-color: white;
     text-align: center;
     -webkit-transition: transform 0.5s;
@@ -121,7 +129,6 @@ body {
 
 .delete:hover {
     cursor: pointer;
-    background-color: none;
     -webkit-transform: scale(1.25,1.25);
     -moz-transform: scale(1.25,1.25);
     -ms-transform: scale(1.25,1.25);

@@ -14,11 +14,13 @@ function createTask() {
         
     if (/\S/.test(input.value)) {
         let newTask = document.createElement('div');
-        
-        newTask.textContent = input.value;
         newTask.classList.add('task');
 
-        tasks.appendChild(newTask);
+        let taskText = document.createElement('p');
+        taskText.textContent = input.value;
+        taskText.classList.add('text');
+    
+        newTask.appendChild(taskText);
 
         let deleteButton = document.createElement('button');
         deleteButton.classList.add('class','delete');
@@ -27,6 +29,8 @@ function createTask() {
         newTask.appendChild(deleteButton);
         
         input.value = "";
+
+        tasks.appendChild(newTask);
 
         deleteButton.addEventListener('click', deleteTask); 
     }
