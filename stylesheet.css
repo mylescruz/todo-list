@@ -16,18 +16,18 @@ body {
 }
 
 .todo {
-    background-color: white;
+    background-color: var(--color-theme);
     border: solid var(--color-theme);
     height: 350px;
     width: 300px;
     box-shadow: 0px 2px 5px var(--color-shadow);
+    border-radius: 20px;
 }
   
 .header {
     display: flex;
     flex-direction: column;
     width: 100%;
-    background-color: var(--color-theme);
     color: white;
     height: 110px;
 }
@@ -91,12 +91,20 @@ body {
     color: white;
 }
 
+.todo-body {
+    background-color: white;
+    height: 232px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
 .tasks {
     display: flex;
     flex-direction: column;
     margin: 0.5em 0.5em;
     overflow-y: scroll;
     max-height: 225px;
+    background-color: white;
 }
 
 ::-webkit-scrollbar {
